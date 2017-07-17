@@ -19,6 +19,14 @@ configure :build do
 end
 
 helpers do
+  def string_replace(text)
+    variables = dato.variables
+    variables.each do |variable|
+      text.gsub!(variable.variable_name, variable.replace_with)
+    end
+    return text
+  end
+
   def markdownify(text)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     markdown.render(text)
