@@ -29,7 +29,7 @@ helpers do
 
   def markdownify(text)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-    markdown.render(text)
+    markdown.render(string_replace(text))
   end
 end
 
