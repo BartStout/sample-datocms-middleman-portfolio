@@ -4,8 +4,8 @@
 
 <article class="sheet">
   <div class="sheet__inner">
-    <h1 class="sheet__title"><%= work.title %></h1>
-    <p class="sheet__lead"><%= work.excerpt %></p>
+    <h1 class="sheet__title"><%= string_replace(work.title) %></h1>
+    <p class="sheet__lead"><%= string_replace(work.excerpt) %></p>
     <div class="sheet__slider">
       <div class="slider js_slider">
         <div class="slider__frame js_frame">
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="sheet__body">
-      <%= markdownify(work.description) %>
+      <%= markdownify(string_replace(work.description)) %>
     </div>
     <div class="sheet__gallery">
       <img src="<%= work.cover_image.url(w: 600, fm: 'jpg', auto: 'compress') %>" />

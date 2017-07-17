@@ -19,7 +19,7 @@
           </h6>
 
           <div class="sidebar__intro">
-            <%= markdownify(dato.home.intro_text) %>
+            <%= markdownify(string_replace(dato.home.intro_text)) %>
           </div>
 
           <ul class="sidebar__menu">
@@ -36,7 +36,7 @@
             <% end %>
           </p>
           <div class="sidebar__copyright">
-            <%= dato.home.copyright %>
+            <%= string_replace(dato.home.copyright) %>
           </div>
         </div>
       </div>

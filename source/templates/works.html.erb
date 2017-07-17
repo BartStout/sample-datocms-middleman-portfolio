@@ -11,10 +11,10 @@
         </a>
         <figcaption class="card__caption">
           <h6 class="card__title">
-            <a href="/works/<%= work.slug %>"><%= work.title %></a>
+            <a href="/works/<%= work.slug %>"><%= string_replace(work.title) %></a>
           </h6>
           <div class="card__description">
-            <p><%= work.excerpt %></p>
+            <p><%= string_replace(work.excerpt) %></p>
           </div>
         </figcaption>
       </figure>
